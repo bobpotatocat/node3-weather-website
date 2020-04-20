@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>weather bread</title>
+        <link rel = "icon" href = "/img/p2.jpg">
+        <link rel = 'stylesheet' href ='/css/styles.css'>
+        
+    </head>
+    <body>
+        <div class = 'main-content'>
+            {{>header}}
+            <p>this is main page for bread</p>
+            <img class = 'portraitBread' src = '/img/bread.jfif'>
+            <form>
+                <input placeholder="enter location...">
+                <button>
+                    Search
+                </button>
+            </form>
+
+            <p id = 'message-1'></p>
+            <p id = 'message-2'></p>
+
+        </div>
+        {{>footer}}
+        <script src = '/js/app.js'></script>
+    </body>
+    
+</html>
