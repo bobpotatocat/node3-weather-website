@@ -10,10 +10,13 @@ const weather =  (latitude, longitude, placeName, callback ) => {
         }else if(body.error){
             callback('unable to find location for weather service ', undefined)
         }else{
-            callback(undefined,
-                body.current.weather_descriptions[0]+ '. It is currently ' + body.current.temperature + " degrees C. It feels like " +
-                body.current.feelslike + " degrees. The humidity is " + body.current.humidity + ' %.'
-            )
+            callback(undefined, {
+                currentTemperature : body.current.temperature,
+                weatherCondition : body.current.weather_descriptions,
+                feelsLikeTemp: body.current.feelslike,
+                humidity: body.current.humidity,
+                placeName
+            })
         }
     })
 }
