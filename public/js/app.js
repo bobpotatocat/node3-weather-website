@@ -19,7 +19,7 @@ weatherForm.addEventListener('submit', (e) => {
         }else{
             console.log(data.forecast)
             messageOne.textContent = "for: " + data.forecast.placeName 
-            messageTwo.textContent = 'it is: ' + data.forecast.weatherCondition[0] + " with a temperature of: " + data.forecast.currentTemperature + " degrees C."
+            messageTwo.textContent = 'it is: ' + data.forecast.weatherCondition[0] + " with a temperature of: " + data.forecast.currentTemperature + " degrees C. humidity: "+ data.forecast.humidity + " and it feels like: " + data.forecast.feelsLikeTemp
         }
     })
 })
